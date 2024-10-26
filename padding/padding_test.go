@@ -6,7 +6,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/muesli/reflow/ansi"
+	"github.com/rwinkhart/reflow-bean/ansi"
 )
 
 func TestPadding(t *testing.T) {

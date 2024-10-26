@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/muesli/reflow/indent"
+	"github.com/rwinkhart/reflow-bean/indent"
 
-	"github.com/muesli/reflow/padding"
+	"github.com/rwinkhart/reflow-bean/padding"
 )
 
 func TestMargin(t *testing.T) {

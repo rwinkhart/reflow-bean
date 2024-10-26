@@ -1,10 +1,6 @@
 # reflow
 
-[![Latest Release](https://img.shields.io/github/release/muesli/reflow.svg)](https://github.com/muesli/reflow/releases)
-[![Build Status](https://github.com/muesli/reflow/workflows/build/badge.svg)](https://github.com/muesli/reflow/actions)
-[![Coverage Status](https://coveralls.io/repos/github/muesli/reflow/badge.svg?branch=master)](https://coveralls.io/github/muesli/reflow?branch=master)
-[![Go ReportCard](https://goreportcard.com/badge/muesli/reflow)](https://goreportcard.com/report/muesli/reflow)
-[![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](https://pkg.go.dev/github.com/muesli/reflow)
+**This is a fork** of [reflow](https://github.com/muesli/reflow) made to merge some upstream PRs that are of use to [BEAN](https://github.com/Trojan2021/BEAN).
 
 A collection of ANSI-aware methods and `io.Writers` helping you to transform
 blocks of text. This means you can still style your terminal output with ANSI
@@ -15,7 +11,7 @@ escape sequences without them affecting the reflow operations & algorithms.
 The `wordwrap` package lets you word-wrap strings or entire blocks of text.
 
 ```go
-import "github.com/muesli/reflow/wordwrap"
+import "github.com/rwinkhart/reflow-bean/wordwrap"
 
 s := wordwrap.String("Hello World!", 5)
 fmt.Println(s)
@@ -50,7 +46,7 @@ f.Newline = []rune{'\r'}
 The `wrap` package lets you unconditionally wrap strings or entire blocks of text.
 
 ```go
-import "github.com/muesli/reflow/wrap"
+import "github.com/rwinkhart/reflow-bean/wrap"
 
 s := wrap.String("Hello World!", 7)
 fmt.Println(s)
@@ -106,14 +102,14 @@ fmt.Println(s)
 
 Result:
 
-![ANSI Example Output](https://github.com/muesli/reflow/blob/master/reflow.png)
+![ANSI Example Output](https://github.com/rwinkhart/reflow-bean/blob/master/reflow.png)
 
 ## Indentation
 
 The `indent` package lets you indent strings or entire blocks of text.
 
 ```go
-import "github.com/muesli/reflow/indent"
+import "github.com/rwinkhart/reflow-bean/indent"
 
 s := indent.String("Hello World!", 4)
 fmt.Println(s)
@@ -147,7 +143,7 @@ fmt.Println(f.String())
 The `dedent` package lets you dedent strings or entire blocks of text.
 
 ```go
-import "github.com/muesli/reflow/dedent"
+import "github.com/rwinkhart/reflow-bean/dedent"
 
 input := `    Hello World!
   Hello World!
@@ -169,7 +165,7 @@ Hello World!
 The `padding` package lets you pad strings or entire blocks of text.
 
 ```go
-import "github.com/muesli/reflow/padding"
+import "github.com/rwinkhart/reflow-bean/padding"
 
 s := padding.String("Hello", 8)
 fmt.Println(s)

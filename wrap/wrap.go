@@ -6,7 +6,7 @@ import (
 	"unicode"
 
 	"github.com/mattn/go-runewidth"
-	"github.com/muesli/reflow/ansi"
+	"github.com/rwinkhart/reflow-bean/ansi"
 )
 
 var (

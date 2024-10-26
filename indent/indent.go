@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/muesli/reflow/ansi"
+	"github.com/rwinkhart/reflow-bean/ansi"
 )
 
 type IndentFunc func(w io.Writer)

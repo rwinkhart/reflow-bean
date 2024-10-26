@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/muesli/reflow/indent"
-	"github.com/muesli/reflow/padding"
+	"github.com/rwinkhart/reflow-bean/indent"
+	"github.com/rwinkhart/reflow-bean/padding"
 )
 
 type Writer struct {
