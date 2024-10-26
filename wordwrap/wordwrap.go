@@ -133,11 +133,6 @@ func (w *WordWrap) Write(b []byte) (int, error) {
 			// end of current word
 			w.addWord()
 			_, _ = w.space.WriteRune(c)
-		} else if inGroup(w.Breakpoints, c) {
-			// valid breakpoint
-			w.addSpace()
-			w.addWord()
-			_, _ = w.buf.WriteRune(c)
 		} else {
 			// any other character
 			_, _ = w.word.WriteRune(c)
@@ -147,6 +142,12 @@ func (w *WordWrap) Write(b []byte) (int, error) {
 			if wordWidth := w.word.PrintableRuneWidth(); w.lineLen+w.space.Len()+wordWidth > w.Limit &&
 				wordWidth < w.Limit {
 				w.addNewLine()
+			}
+
+			// if we just saw a breakpoint, it's like seeing a space; we
+			// immediately flush the word-in-progress to the buffer
+			if inGroup(w.Breakpoints, c) {
+				w.addWord()
 			}
 		}
 	}
