@@ -1,6 +1,10 @@
 # reflow
 
-**This is a fork** of [reflow](https://github.com/muesli/reflow) made to merge some upstream PRs that are of use to [BEAN](https://github.com/Trojan2021/BEAN).
+I STRONGLY RECOMMEND JUST USING [github.com/charmbracelet/x/ansi](HTTPS://github.com/charmbracelet/x) INSTEAD! :)
+
+**This is a fork** of [reflow](https://github.com/muesli/reflow) made to merge some upstream PRs.
+
+***
 
 A collection of ANSI-aware methods and `io.Writers` helping you to transform
 blocks of text. This means you can still style your terminal output with ANSI
